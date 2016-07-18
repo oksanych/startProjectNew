@@ -158,3 +158,7 @@ gulp.task('serve', function() {
 gulp.task('dev',
     gulp.series('build', gulp.parallel('watch', 'serve'))
 );
+
+// Default task
+//--------------------------
+gulp.task('default', gulp.series('dev'));
