@@ -16,8 +16,6 @@ const imagemin = require('gulp-imagemin');
 const pngquant = require('imagemin-pngquant');
 const uglify = require('gulp-uglify');
 const uncss = require('gulp-uncss');
-const rev = require('gulp-rev');
-const revReplace = require('gulp-rev-replace');
 const browserSync = require('browser-sync').create();
 
 //Path
