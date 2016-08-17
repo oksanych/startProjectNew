@@ -1,0 +1,213 @@
+// --------------------------------------------------
+// Forms
+// --------------------------------------------------
+
+// Input field
+// --------------------------
+
+.field {
+  @include transition(background, 0.15s, linear);
+
+  appearance: none;
+  border: .1rem solid $black;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: $black;
+  display: inline-block;
+  font-size: $font-size-md;
+  outline: none;
+  padding: 1.25rem 1.5rem;
+  width: 100%;
+
+  &::-webkit-input-placeholder {
+    color: $black;
+    font-size: $font-size-sm;
+  }
+
+  &:-moz-placeholder {
+    color: $black;
+    font-size: $font-size-sm;
+  }
+
+  &::-moz-placeholder {
+    color: $black;
+    font-size: $font-size-sm;
+  }
+
+  &:-ms-input-placeholder {
+    color: $black;
+    font-size: $font-size-sm;
+  }
+
+  &:focus,
+  &:active {
+    background: $white-smoke;
+  }
+
+  &--textarea {
+    resize: vertical;
+    min-height: 10rem;
+  }
+
+  &--search {
+    @include transition(border-color, 0.15s, linear);
+
+    position: relative;
+
+    &::-webkit-input-placeholder {
+      color: $black;
+      font-size: $font-size-sm;
+    }
+
+    &:-moz-placeholder {
+      color: $black;
+      font-size: $font-size-sm;
+    }
+
+    &::-moz-placeholder {
+      color: $black;
+      font-size: $font-size-sm;
+    }
+
+    &:-ms-input-placeholder {
+      color: $black;
+      font-size: $font-size-sm;
+    }
+
+    &:focus,
+    &:active {
+      background: $white;
+      border-color: $black;
+    }
+  }
+
+  &--select {
+    background: $white;
+
+    &-wrap {
+      position: relative;
+      flex: 3 0;
+
+      &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: .7rem .5rem 0 .5rem;
+        border-color: $black transparent transparent transparent;
+        position: absolute;
+        right: 1rem;
+        top: 45%;
+        pointer-events: none;
+      }
+    }
+
+    &:focus,
+    &:active {
+      background: $white;
+    }
+  }
+}
+
+// Input field-group
+// --------------------------
+
+.field-group {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 2rem;
+
+  &__title {
+    color: $black;
+    margin-bottom: 2.5rem;
+    width: 100%;
+  }
+
+  .field {
+    flex-grow: 3;
+
+    &__label {
+      flex-grow: 1;
+      padding-right: 2.5rem;
+      text-align: right;
+    }
+  }
+
+  @include screen-sm {
+    margin-bottom: 1rem;
+    display: block;
+
+    .field {
+
+      &__label {
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+// Radio button
+// --------------------------
+
+.custom-radio {
+  display: none;
+
+  &-btn {
+    border: .1rem solid $black;
+    border-radius: 50%;
+    display: inline-block;
+    height: 2rem;
+    margin-right: 1rem;
+    position: relative;
+    width: 2rem;
+  }
+
+  &:checked + .custom-radio-label > .custom-radio-btn {
+
+    &::before {
+      content: '';
+      background: $black;
+      border-radius: 50%;
+      height: 1rem;
+      position: absolute;
+      width: 1rem;
+      top: calc(50% - .5rem);
+      left: calc(50% - .5rem);
+    }
+  }
+}
+
+// Checkbox
+// --------------------------
+
+.custom-checkbox {
+  display: none;
+
+  &-btn {
+    border: .1rem solid $black;
+    display: inline-block;
+    height: 3rem;
+    margin-right: 1rem;
+    position: relative;
+    width: 3rem;
+  }
+
+  &-label {
+
+  }
+
+  &:checked + .custom-checkbox-label > .custom-checkbox-btn {
+
+    &::before {
+      content: '';
+      background: $black;
+      height: 2.2rem;
+      position: absolute;
+      width: 2.2rem;
+      top: calc(50% - 1.1rem);
+      left: calc(50% - 1.1rem);
+    }
+  }
+}

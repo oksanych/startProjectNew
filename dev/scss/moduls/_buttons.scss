@@ -1,0 +1,25 @@
+// --------------------------------------------------
+// Buttons
+// --------------------------------------------------
+
+.btn {
+  @include transition(background, 0.15s, linear);
+
+  background: none;
+  box-sizing: border-box;
+  border: .1rem solid $black;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: $font-size-md;
+  outline: none;
+  padding: 1rem .5rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+
+  &:hover {
+    background: $white;
+    color: $white;
+  }
+}

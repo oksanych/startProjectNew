@@ -1,0 +1,9 @@
+// --------------------------------------------------
+// Fonts
+// --------------------------------------------------
+
+@include font-face('Open Sans', $fontPath + $pathOpenSans + '--regular')
+@include font-face('Open Sans Bold', $fontPath + $pathOpenSans + '--bold')
+@include font-face('Open Sans Semi Bold', $fontPath + $pathOpenSans + '--semibold')
+@include font-face('Open Sans Italic', $fontPath + $pathOpenSans + '--italic')
+@include font-face('Open Sans Light', $fontPath + $pathOpenSans + '--light')

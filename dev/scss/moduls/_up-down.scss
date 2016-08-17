@@ -1,0 +1,38 @@
+// --------------------------------------------------
+// Up/down
+// --------------------------------------------------
+
+.up-down {
+
+  &-wrap {
+    position: fixed;
+    top: 45%;
+    z-index: 100;
+    right: 2.5%;
+
+    .up,
+    .down {
+      cursor: pointer;
+    }
+
+    .up {
+      transform: rotate(180deg);
+      margin-bottom: 3rem;
+    }
+
+    .icon {
+      font-size: 6rem;
+      color: black;
+    }
+  }
+
+  @include screen-md {
+    &-wrap {
+      top: 75%;
+
+      .icon {
+        font-size: 4rem;
+      }
+    }
+  }
+}
